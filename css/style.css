@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: #fff5f5;
+  color: #ce9797;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1398px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1398px) {
+  .container {
+    display: block;
+  }
+}
+
+.content {
+  background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, white, #fff5f5);
+  max-width: 788px;
+  padding: 150px 200px 177px 160px;
+}
+
+@media (max-width: 1398px) {
+  .content {
+    background-image: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    max-width: 500px;
+  }
+}
+
+h1 {
+  width: 158px;
+  margin-bottom: 110px;
+}
+
+@media (max-width: 1398px) {
+  h1 {
+    width: 200px;
+    margin: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    width: 100px;
+    margin: 20px;
+  }
+}
+
+.image-pad {
+  display: none;
+}
+
+@media (max-width: 1398px) {
+  .image-pad {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1398px) {
+  .text {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#fff5f5));
+    background-image: linear-gradient(white, #fff5f5);
+    padding: 100px 190px 150px 190px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .text {
+    padding: 70px 30px 30px 30px;
+  }
+}
+
+h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 15px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+h2 span {
+  color: #413a3a;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+input {
+  font-family: "Josefin Sans", sans-serif;
+  border: 1px solid #ce9797;
+  outline: none;
+  background: transparent;
+  padding: 15px 90px 15px 30px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+input::-webkit-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #debaba;
+  font-size: 16px;
+}
+
+input:-ms-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #debaba;
+  font-size: 16px;
+}
+
+input::-ms-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #debaba;
+  font-size: 16px;
+}
+
+input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #debaba;
+  font-size: 16px;
+}
+
+.submit {
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 14px 35px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 10px 30px #debaba;
+          box-shadow: 0 10px 30px #debaba;
+}
+
+.submit:hover {
+  background: #f8bfbf;
+  -webkit-box-shadow: 0 10px 30px #ce9797;
+          box-shadow: 0 10px 30px #ce9797;
+}
+
+@media (max-width: 800px) {
+  .submit {
+    padding: 14px 25px;
+  }
+}
+
+.submit img {
+  width: 12px;
+  height: 20px;
+}
+
+.error_img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 90px;
+}
+
+.error_text {
+  color: #f96262;
+  padding: 10px 30px;
+  text-align: left;
+}
+
+.error_input {
+  border: 1px solid #f96262;
+}
+
+.error-hide {
+  display: none;
+}
+
+.image-pc {
+  max-width: 610px;
+}
+
+@media (max-width: 1398px) {
+  .image-pc {
+    display: none;
+  }
+}
+
+.attribution {
+  margin: 20px auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  display: inline-block;
+  color: #3e52a3;
+}
+
+.wrap {
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */

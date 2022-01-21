@@ -1,0 +1,212 @@
+// CSS Reset
+@import 'reset';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+// Variables
+$desaturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$darkGrayishRed: hsl(0, 6%, 24%);
+$whitePink: hsl(0, 100%, 98%);
+$lightPink: hsl(0, 80%, 86%);
+$linearWhite-0: hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+$linearWhite-135: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+$linearPink-135: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+$josefin: 'Josefin Sans', sans-serif; // 300, 400, 600
+
+// Mixin
+@mixin pad {
+    @media (max-width: 1398px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+// My CSS
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $josefin;
+    background: $whitePink;
+    color: $desaturatedRed;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1398px;
+    margin: 0 auto;
+    display: flex;
+    @include pad {
+        display: block;
+    }
+}
+
+.content {
+    background-image: url('../images/bg-pattern-desktop.svg'), linear-gradient($linearWhite-135);
+    max-width: 788px;
+    padding: 150px 200px 177px 160px;
+    @include pad {
+        background-image: none;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include mobile {
+        max-width: 500px;
+    }
+}
+
+h1 {
+    width: 158px;
+    margin-bottom: 110px;
+    @include pad {
+        width: 200px;
+        margin: 40px;
+    }
+    @include mobile {
+        width: 100px;
+        margin: 20px;
+    }
+}
+
+.image-pad {
+    display: none;
+    @include pad {
+        display: block;
+        width: 100%;
+    }
+}
+
+.text {
+    @include pad {
+        background-image: linear-gradient($linearWhite-0);
+        padding: 100px 190px 150px 190px;
+        text-align: center;
+    }
+    @include mobile {
+        padding: 70px 30px 30px 30px;
+    }
+}
+
+h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 15px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    @include mobile {
+        font-size: 40px;
+    }
+    span {
+        color: $darkGrayishRed;
+        font-weight: 600;
+    }
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    position: relative;
+}
+
+input {
+    font-family: $josefin;
+    border: 1px solid $desaturatedRed;
+    outline: none;
+    background: transparent;
+    padding: 15px 90px 15px 30px;
+    border-radius: 30px;
+    width: 100%;
+    &::placeholder {
+        font-family: $josefin;
+        color: lighten($desaturatedRed, 10%);
+        font-size: 16px;
+    }
+}
+
+.submit {
+    position: absolute;
+    right: 0;
+    background-image: linear-gradient($linearPink-135);
+    padding: 14px 35px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px lighten($desaturatedRed, 10%);
+    &:hover {
+        background: $lightPink;
+        box-shadow: 0 10px 30px $desaturatedRed;
+    }
+    @include mobile {
+        padding: 14px 25px;
+    }
+    img {
+        width: 12px;
+        height: 20px;
+    }
+}
+
+.error_img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 90px;
+}
+
+.error_text {
+    color: $softRed;
+    padding: 10px 30px;
+    text-align: left;
+}
+
+.error_input {
+    border: 1px solid $softRed;
+}
+
+.error-hide {
+    display: none;
+}
+
+.image-pc {
+    max-width: 610px;
+    @include pad {
+        display: none;
+    }
+}
+
+.attribution {
+    margin: 20px auto;
+    font-size: 11px;
+    text-align: center;
+    a {
+        display: inline-block;
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.wrap {
+    overflow: hidden;
+}
