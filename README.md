@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/joyun25/base-apparel-coming-soon-master)
-- Live Site URL: [Github Page](https://joyun25.github.io/base-apparel-coming-soon-master/)
+- Solution URL: [Github](https://github.com/joyun25/base-apparel-coming-soon)
+- Live Site URL: [Github Page](https://joyun25.github.io/base-apparel-coming-soon/)
 
 ### Built with
 
